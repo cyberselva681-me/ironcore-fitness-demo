@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Membership Pricing | Ironcore Fitness Kammanahalli, Bengaluru</title>
+<meta name="description" content="Simple monthly, quarterly and annual membership pricing at Ironcore Fitness, Kammanahalli, Bengaluru. Every plan starts with a free trial session.">
+<meta name="theme-color" content="#0d0e10">
+<meta name="view-transition" content="same-origin">
+<link rel="canonical" href="https://www.ironcorefitness.example/pricing.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Ironcore Fitness">
+<meta property="og:title" content="Membership Pricing | Ironcore Fitness">
+<meta property="og:description" content="Simple pricing, no joining traps. Every plan starts with a free trial session and a fitness assessment.">
+<meta property="og:url" content="https://www.ironcorefitness.example/pricing.html">
+<meta property="og:image" content="https://www.ironcorefitness.example/assets/images/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@800;900&family=Manrope:wght@400..700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="nav" id="nav">
+  <div class="wrap nav__in">
+    <a href="index.html" class="logo" data-bind="name" aria-label="Home">Your Gym Name</a>
+    <nav id="menu" class="menu" aria-label="Primary">
+      <a href="index.html">Home</a><a href="about.html">About</a><a href="classes.html">Classes</a>
+      <a href="trainers.html">Trainers</a><a href="pricing.html" class="active">Pricing</a><a href="contact.html">Contact</a>
+      <a class="btn btn--sm menu__join" href="contact.html#contact-form">Book free trial</a>
+    </nav>
+    <a class="btn btn--sm nav__join" href="contact.html#contact-form">Book free trial</a>
+    <button class="burger" id="burger" aria-expanded="false" aria-controls="menu" aria-label="Toggle menu"><span></span><span></span></button>
+  </div>
+</header>
+
+<main id="main">
+<section class="pagehead">
+  <div class="wrap">
+    <p class="pagehead__kicker">Pricing</p>
+    <h1>Simple pricing. No joining traps.</h1>
+    <p>Every plan starts with a free trial session and a fitness assessment.</p>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="grid g3 plans" id="plansGrid"></div>
+  </div>
+</section>
+
+<section class="sec sec--alt cta" id="join">
+  <div class="wrap">
+    <h2>Still have questions about a plan?</h2>
+    <p>Ask us on WhatsApp or check the FAQ on the contact page — we're happy to help you pick the right one.</p>
+    <div class="row"><a class="btn btn--wa" data-wa href="#" target="_blank" rel="noopener">WhatsApp us</a><a class="btn btn--ghost" href="contact.html#faq">Read the FAQ</a></div>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot__in">
+    <div><a href="index.html" class="logo" data-bind="name">Your Gym Name</a><p data-bind="address"></p><p data-bind="hours"></p></div>
+    <nav aria-label="Footer"><a href="classes.html">Classes</a><a href="pricing.html">Pricing</a><a href="contact.html#faq">FAQ</a><a href="contact.html">Contact</a></nav>
+    <div><a data-ig href="#" target="_blank" rel="noopener">Instagram</a><a data-tel href="#">Call us</a><a data-wa href="#" target="_blank" rel="noopener">WhatsApp</a></div>
+  </div>
+  <p class="wrap copy">&copy; <span id="year"></span> <span data-bind="name"></span>. All rights reserved.</p>
+</footer>
+
+<a class="wa" data-wa href="#" target="_blank" rel="noopener" aria-label="Chat with us on WhatsApp">WhatsApp</a>
+<div class="dock" aria-label="Quick contact"><a data-tel href="#">Call now</a><a data-wa href="#" target="_blank" rel="noopener">WhatsApp</a><a class="on" href="contact.html#contact-form">Free trial</a></div>
+<script src="config.js"></script>
+<script src="app.js" defer></script>
+</body>
+</html>

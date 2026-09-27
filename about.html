@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>About Us | Ironcore Fitness Kammanahalli, Bengaluru</title>
+<meta name="description" content="Since 2016 Ironcore Fitness has helped Bengaluru lift heavier and move better. Meet the gym, the floor and the philosophy behind it.">
+<meta name="theme-color" content="#0d0e10">
+<meta name="view-transition" content="same-origin">
+<link rel="canonical" href="https://www.ironcorefitness.example/about.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Ironcore Fitness">
+<meta property="og:title" content="About Ironcore Fitness">
+<meta property="og:description" content="A 9,000 sq ft gym floor, certified coaches and a community that shows up. Here's what makes Ironcore different.">
+<meta property="og:url" content="https://www.ironcorefitness.example/about.html">
+<meta property="og:image" content="https://www.ironcorefitness.example/assets/images/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@800;900&family=Manrope:wght@400..700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="nav" id="nav">
+  <div class="wrap nav__in">
+    <a href="index.html" class="logo" data-bind="name" aria-label="Home">Your Gym Name</a>
+    <nav id="menu" class="menu" aria-label="Primary">
+      <a href="index.html">Home</a><a href="about.html" class="active">About</a><a href="classes.html">Classes</a>
+      <a href="trainers.html">Trainers</a><a href="pricing.html">Pricing</a><a href="contact.html">Contact</a>
+      <a class="btn btn--sm menu__join" href="contact.html#contact-form">Book free trial</a>
+    </nav>
+    <a class="btn btn--sm nav__join" href="contact.html#contact-form">Book free trial</a>
+    <button class="burger" id="burger" aria-expanded="false" aria-controls="menu" aria-label="Toggle menu"><span></span><span></span></button>
+  </div>
+</header>
+
+<main id="main">
+<section class="pagehead">
+  <div class="wrap">
+    <p class="pagehead__kicker">About us</p>
+    <h1>A gym built for progress</h1>
+    <p>The floor, the coaches and the philosophy behind Ironcore Fitness.</p>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap split">
+    <div class="ph-wrap rv" id="aboutImg"></div>
+    <div class="rv">
+      <h2 id="aboutTitle"></h2>
+      <div id="aboutText" class="prose"></div>
+      <ul class="ticks" id="aboutPoints"></ul>
+      <p class="row" style="margin-top:2rem"><a class="btn" href="contact.html#contact-form">Join now</a></p>
+    </div>
+  </div>
+</section>
+
+<section class="sec sec--alt trust" id="trust" aria-labelledby="trust-h">
+  <div class="wrap">
+    <h2 class="sr-only" id="trust-h">Why members choose us</h2>
+    <div class="grid stats" id="statsGrid"></div>
+  </div>
+</section>
+
+<section class="sec cta" id="join">
+  <div class="wrap">
+    <h2>Meet the team on the floor</h2>
+    <p>Every coach at Ironcore is certified and on shift, not stuck behind a desk.</p>
+    <div class="row"><a class="btn" href="trainers.html">Meet the coaches</a><a class="btn btn--ghost" href="classes.html">See our classes</a></div>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot__in">
+    <div><a href="index.html" class="logo" data-bind="name">Your Gym Name</a><p data-bind="address"></p><p data-bind="hours"></p></div>
+    <nav aria-label="Footer"><a href="classes.html">Classes</a><a href="pricing.html">Pricing</a><a href="contact.html#faq">FAQ</a><a href="contact.html">Contact</a></nav>
+    <div><a data-ig href="#" target="_blank" rel="noopener">Instagram</a><a data-tel href="#">Call us</a><a data-wa href="#" target="_blank" rel="noopener">WhatsApp</a></div>
+  </div>
+  <p class="wrap copy">&copy; <span id="year"></span> <span data-bind="name"></span>. All rights reserved.</p>
+</footer>
+
+<a class="wa" data-wa href="#" target="_blank" rel="noopener" aria-label="Chat with us on WhatsApp">WhatsApp</a>
+<div class="dock" aria-label="Quick contact"><a data-tel href="#">Call now</a><a data-wa href="#" target="_blank" rel="noopener">WhatsApp</a><a class="on" href="contact.html#contact-form">Free trial</a></div>
+<script src="config.js"></script>
+<script src="app.js" defer></script>
+</body>
+</html>

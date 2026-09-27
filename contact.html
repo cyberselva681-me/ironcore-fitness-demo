@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact &amp; Free Trial | Ironcore Fitness Kammanahalli, Bengaluru</title>
+<meta name="description" content="Book a free trial at Ironcore Fitness, Kammanahalli, Bengaluru. See member results, reviews, FAQs, our location and opening hours.">
+<meta name="theme-color" content="#0d0e10">
+<meta name="view-transition" content="same-origin">
+<link rel="canonical" href="https://www.ironcorefitness.example/contact.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Ironcore Fitness">
+<meta property="og:title" content="Contact &amp; Free Trial | Ironcore Fitness">
+<meta property="og:description" content="Book your free trial session, see member results and reviews, and find our Kammanahalli location.">
+<meta property="og:url" content="https://www.ironcorefitness.example/contact.html">
+<meta property="og:image" content="https://www.ironcorefitness.example/assets/images/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@800;900&family=Manrope:wght@400..700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="nav" id="nav">
+  <div class="wrap nav__in">
+    <a href="index.html" class="logo" data-bind="name" aria-label="Home">Your Gym Name</a>
+    <nav id="menu" class="menu" aria-label="Primary">
+      <a href="index.html">Home</a><a href="about.html">About</a><a href="classes.html">Classes</a>
+      <a href="trainers.html">Trainers</a><a href="pricing.html">Pricing</a><a href="contact.html" class="active">Contact</a>
+      <a class="btn btn--sm menu__join" href="#contact-form">Book free trial</a>
+    </nav>
+    <a class="btn btn--sm nav__join" href="#contact-form">Book free trial</a>
+    <button class="burger" id="burger" aria-expanded="false" aria-controls="menu" aria-label="Toggle menu"><span></span><span></span></button>
+  </div>
+</header>
+
+<main id="main">
+<section class="pagehead">
+  <div class="wrap">
+    <p class="pagehead__kicker">Contact</p>
+    <h1>Book your free trial</h1>
+    <p>Real member results, real reviews, answers to common questions, and everything you need to find us.</p>
+  </div>
+</section>
+
+<section class="sec" id="results">
+  <div class="wrap">
+    <div class="head rv"><h2>Real members. Real results.</h2><p>Shared with permission. Individual results vary.</p></div>
+    <div class="grid g3" id="galleryGrid"></div>
+  </div>
+</section>
+
+<section class="sec sec--alt" id="reviews">
+  <div class="wrap">
+    <div class="head rv"><h2>What members say</h2><p id="reviewLink"></p></div>
+    <div class="grid g3" id="reviewsGrid"></div>
+  </div>
+</section>
+
+<section class="sec" id="faq">
+  <div class="wrap faq">
+    <div class="head rv"><h2>Questions before you join</h2><p>Still unsure? <a data-wa href="#" target="_blank" rel="noopener">Ask us on WhatsApp</a>.</p></div>
+    <div id="faqList" class="rv"></div>
+  </div>
+</section>
+
+<section class="sec sec--alt" id="location">
+  <div class="wrap">
+    <div class="head rv"><h2>Find us in <span data-bind="area"></span></h2><p data-bind="address"></p></div>
+    <div class="map rv"><iframe id="mapFrame" title="Map showing the gym location" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+    <p class="row row--c"><a class="btn btn--ghost" id="dirLink" href="#" target="_blank" rel="noopener">Get directions</a></p>
+  </div>
+</section>
+
+<section class="sec" id="contact-form">
+  <div class="wrap split split--top">
+    <div class="rv">
+      <h2>Book your free trial</h2>
+      <p class="prose">Pick a time that suits you and we will confirm it. Prefer to talk? Call or message us now.</p>
+      <div class="row" style="margin-top:1.5rem"><a class="btn btn--wa" data-wa href="#" target="_blank" rel="noopener">WhatsApp us</a><a class="btn btn--ghost" data-tel href="#">Call now</a></div>
+      <ul class="info">
+        <li><b>Phone</b><a data-tel data-bind="phoneDisplay" href="#"></a></li>
+        <li><b>Email</b><a data-mail data-bind="email" href="#"></a></li>
+        <li><b>Hours</b><span data-bind="hours"></span></li>
+        <li><b>Instagram</b><a data-ig data-bind="instagramHandle" href="#" target="_blank" rel="noopener"></a></li>
+      </ul>
+    </div>
+    <form class="card form rv" id="form" name="trial" novalidate data-netlify="true" netlify-honeypot="website">
+      <input type="hidden" name="form-name" value="trial">
+      <label for="f-name">Full name</label>
+      <input id="f-name" name="name" autocomplete="name" required aria-describedby="e-name">
+      <p class="err" id="e-name"></p>
+      <label for="f-phone">Mobile number</label>
+      <input id="f-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" placeholder="98765 43210" required aria-describedby="e-phone">
+      <p class="err" id="e-phone"></p>
+      <label for="f-interest">Interested in</label>
+      <select id="f-interest" name="interest" required aria-describedby="e-interest"></select>
+      <p class="err" id="e-interest"></p>
+      <label for="f-time">Preferred time</label>
+      <select id="f-time" name="time" required aria-describedby="e-time"></select>
+      <p class="err" id="e-time"></p>
+      <input class="hp" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <button class="btn" type="submit">Book free trial</button>
+      <p class="note" id="formNote"></p>
+      <p class="status" id="status" role="status" aria-live="polite"></p>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot__in">
+    <div><a href="index.html" class="logo" data-bind="name">Your Gym Name</a><p data-bind="address"></p><p data-bind="hours"></p></div>
+    <nav aria-label="Footer"><a href="classes.html">Classes</a><a href="pricing.html">Pricing</a><a href="contact.html#faq">FAQ</a><a href="contact.html">Contact</a></nav>
+    <div><a data-ig href="#" target="_blank" rel="noopener">Instagram</a><a data-tel href="#">Call us</a><a data-wa href="#" target="_blank" rel="noopener">WhatsApp</a></div>
+  </div>
+  <p class="wrap copy">&copy; <span id="year"></span> <span data-bind="name"></span>. All rights reserved.</p>
+</footer>
+
+<a class="wa" data-wa href="#" target="_blank" rel="noopener" aria-label="Chat with us on WhatsApp">WhatsApp</a>
+<div class="dock" aria-label="Quick contact"><a data-tel href="#">Call now</a><a data-wa href="#" target="_blank" rel="noopener">WhatsApp</a><a class="on" href="#contact-form">Free trial</a></div>
+<script src="config.js"></script>
+<script src="app.js" defer></script>
+</body>
+</html>

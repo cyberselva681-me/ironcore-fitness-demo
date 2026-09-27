@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- =====================================================================
+     ONLY MANUAL HTML EDIT NEEDED PER PAGE: title, description, canonical,
+     og:title, og:description, og:url below. Everything else on this page
+     comes from CONFIG in config.js. See README.md. -->
+<title>Ironcore Fitness | Premium Strength &amp; Performance Gym in Kammanahalli, Bengaluru</title>
+<meta name="description" content="Ironcore Fitness in Kammanahalli, Bengaluru: strength training, HIIT, personal coaching and flexible memberships. Book your free trial or WhatsApp us today.">
+<meta name="theme-color" content="#0d0e10">
+<meta name="view-transition" content="same-origin">
+<link rel="canonical" href="https://www.ironcorefitness.example/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Ironcore Fitness">
+<meta property="og:title" content="Ironcore Fitness | Premium Strength &amp; Performance Gym">
+<meta property="og:description" content="Expert coaching, serious equipment, flexible memberships in Kammanahalli, Bengaluru. Book a free trial.">
+<meta property="og:url" content="https://www.ironcorefitness.example/">
+<meta property="og:image" content="https://www.ironcorefitness.example/assets/images/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<!-- ===================================================================== -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="image" href="assets/images/hero.jpg" fetchpriority="high">
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@800;900&family=Manrope:wght@400..700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<!-- LocalBusiness JSON-LD is generated from CONFIG in app.js. -->
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="nav" id="nav">
+  <div class="wrap nav__in">
+    <a href="index.html" class="logo" data-bind="name" aria-label="Home">Your Gym Name</a>
+    <nav id="menu" class="menu" aria-label="Primary">
+      <a href="index.html" class="active">Home</a><a href="about.html">About</a><a href="classes.html">Classes</a>
+      <a href="trainers.html">Trainers</a><a href="pricing.html">Pricing</a><a href="contact.html">Contact</a>
+      <a class="btn btn--sm menu__join" href="contact.html#contact-form">Book free trial</a>
+    </nav>
+    <a class="btn btn--sm nav__join" href="contact.html#contact-form">Book free trial</a>
+    <button class="burger" id="burger" aria-expanded="false" aria-controls="menu" aria-label="Toggle menu"><span></span><span></span></button>
+  </div>
+</header>
+
+<main id="main">
+<section class="hero" id="top">
+  <div class="hero__bg"></div>
+  <img class="hero__img" id="heroImg" src="assets/images/hero.jpg" alt="" width="1920" height="1080" fetchpriority="high" decoding="async" data-ph="hero">
+  <div class="hero__shade"></div>
+  <div class="wrap hero__in">
+    <p class="hero__kicker" data-bind="tagline">Premium Strength &amp; Performance Gym</p>
+    <h1 class="hero__title" id="heroTitle">Build real<br><em>strength</em></h1>
+    <p class="hero__sub" id="heroSub"></p>
+    <div class="row hero__cta">
+      <a class="btn" href="contact.html#contact-form">Book free trial</a>
+      <a class="btn btn--wa" data-wa href="#" target="_blank" rel="noopener">WhatsApp us</a>
+      <a class="btn btn--ghost" data-tel href="#">Call now</a>
+    </div>
+  </div>
+  <ul class="wrap hero__strip" aria-label="Quick info">
+    <li><b>Open</b><span data-bind="hoursShort"></span></li>
+    <li><b>Find us</b><span data-bind="address"></span></li>
+    <li><b>Call</b><a data-tel data-bind="phoneDisplay" href="#"></a></li>
+  </ul>
+</section>
+
+<section class="sec sec--alt trust" id="trust" aria-labelledby="trust-h">
+  <div class="wrap">
+    <h2 class="sr-only" id="trust-h">Why members choose us</h2>
+    <div class="grid stats" id="statsGrid"></div>
+  </div>
+</section>
+
+<section class="sec" id="about">
+  <div class="wrap split">
+    <div class="ph-wrap rv" id="aboutImg"></div>
+    <div class="rv">
+      <h2 id="aboutTitle"></h2>
+      <div id="aboutText" class="prose" data-limit="1"></div>
+      <ul class="ticks" id="aboutPoints"></ul>
+      <a class="teaser-link" href="about.html">More about Ironcore &rarr;</a>
+    </div>
+  </div>
+</section>
+
+<section class="sec sec--alt" id="services">
+  <div class="wrap">
+    <div class="head rv"><h2>Programmes built around your goal</h2><p>Whether you lift, run or restart, there is a programme with your name on it.</p></div>
+    <div class="grid g3" id="servicesGrid" data-limit="3"></div>
+    <p class="row row--c"><a class="btn btn--ghost" href="classes.html">View all classes</a></p>
+  </div>
+</section>
+
+<section class="sec cta" id="join">
+  <div class="wrap">
+    <h2>Your first session is free</h2>
+    <p>Come try the floor, meet a coach and see if Ironcore is the right fit. No pressure, no pushy sales.</p>
+    <div class="row"><a class="btn" href="contact.html#contact-form">Book free trial</a><a class="btn btn--wa" data-wa href="#" target="_blank" rel="noopener">WhatsApp us</a></div>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot__in">
+    <div><a href="index.html" class="logo" data-bind="name">Your Gym Name</a><p data-bind="address"></p><p data-bind="hours"></p></div>
+    <nav aria-label="Footer"><a href="classes.html">Classes</a><a href="pricing.html">Pricing</a><a href="contact.html#faq">FAQ</a><a href="contact.html">Contact</a></nav>
+    <div><a data-ig href="#" target="_blank" rel="noopener">Instagram</a><a data-tel href="#">Call us</a><a data-wa href="#" target="_blank" rel="noopener">WhatsApp</a></div>
+  </div>
+  <p class="wrap copy">&copy; <span id="year"></span> <span data-bind="name"></span>. All rights reserved.</p>
+</footer>
+
+<a class="wa" data-wa href="#" target="_blank" rel="noopener" aria-label="Chat with us on WhatsApp">WhatsApp</a>
+<div class="dock" aria-label="Quick contact"><a data-tel href="#">Call now</a><a data-wa href="#" target="_blank" rel="noopener">WhatsApp</a><a class="on" href="contact.html#contact-form">Free trial</a></div>
+<script src="config.js"></script>
+<script src="app.js" defer></script>
+</body>
+</html>
