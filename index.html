@@ -4,16 +4,13 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <!-- =====================================================================
-     ONLY MANUAL HTML EDIT NEEDED: the 6 tags below (title, description,
-     canonical, og:title, og:description, og:url). Search engines and link
-     previews (WhatsApp/Facebook/etc.) read these before any JavaScript
-     runs, so they can't be generated from CONFIG. Everything else on this
-     page — text, images, links, colors, prices, hours — comes from the
-     CONFIG object at the top of script.js. See README.md.
-     ===================================================================== -->
+     ONLY MANUAL HTML EDIT NEEDED PER PAGE: title, description, canonical,
+     og:title, og:description, og:url below. Everything else on this page
+     comes from CONFIG in config.js. See README.md. -->
 <title>Ironcore Fitness | Premium Strength &amp; Performance Gym in Kammanahalli, Bengaluru</title>
 <meta name="description" content="Ironcore Fitness in Kammanahalli, Bengaluru: strength training, HIIT, personal coaching and flexible memberships. Book your free trial or WhatsApp us today.">
 <meta name="theme-color" content="#0d0e10">
+<meta name="view-transition" content="same-origin">
 <link rel="canonical" href="https://www.ironcorefitness.example/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Ironcore Fitness">
@@ -28,19 +25,19 @@
 <link rel="preload" as="image" href="assets/images/hero.jpg" fetchpriority="high">
 <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@800;900&family=Manrope:wght@400..700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
-<!-- LocalBusiness JSON-LD is generated from CONFIG in script.js. -->
+<!-- LocalBusiness JSON-LD is generated from CONFIG in app.js. -->
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
 <header class="nav" id="nav">
   <div class="wrap nav__in">
-    <a href="#top" class="logo" data-bind="name" aria-label="Home">Your Gym Name</a>
+    <a href="index.html" class="logo" data-bind="name" aria-label="Home">Your Gym Name</a>
     <nav id="menu" class="menu" aria-label="Primary">
-      <a href="#about">About</a><a href="#services">Classes</a><a href="#trainers">Coaches</a>
-      <a href="#plans">Pricing</a><a href="#results">Results</a><a href="#faq">FAQ</a><a href="#contact">Contact</a>
-      <a class="btn btn--sm menu__join" href="#contact">Book free trial</a>
+      <a href="index.html" class="active">Home</a><a href="about.html">About</a><a href="classes.html">Classes</a>
+      <a href="trainers.html">Trainers</a><a href="pricing.html">Pricing</a><a href="contact.html">Contact</a>
+      <a class="btn btn--sm menu__join" href="contact.html#contact-form">Book free trial</a>
     </nav>
-    <a class="btn btn--sm nav__join" href="#contact">Book free trial</a>
+    <a class="btn btn--sm nav__join" href="contact.html#contact-form">Book free trial</a>
     <button class="burger" id="burger" aria-expanded="false" aria-controls="menu" aria-label="Toggle menu"><span></span><span></span></button>
   </div>
 </header>
@@ -55,7 +52,7 @@
     <h1 class="hero__title" id="heroTitle">Build real<br><em>strength</em></h1>
     <p class="hero__sub" id="heroSub"></p>
     <div class="row hero__cta">
-      <a class="btn" href="#contact">Book free trial</a>
+      <a class="btn" href="contact.html#contact-form">Book free trial</a>
       <a class="btn btn--wa" data-wa href="#" target="_blank" rel="noopener">WhatsApp us</a>
       <a class="btn btn--ghost" data-tel href="#">Call now</a>
     </div>
@@ -77,108 +74,44 @@
 <section class="sec" id="about">
   <div class="wrap split">
     <div class="ph-wrap rv" id="aboutImg"></div>
-    <div class="rv"><h2 id="aboutTitle"></h2><div id="aboutText" class="prose"></div><ul class="ticks" id="aboutPoints"></ul>
-      <p class="row" style="margin-top:2rem"><a class="btn" href="#contact">Join now</a></p></div>
+    <div class="rv">
+      <h2 id="aboutTitle"></h2>
+      <div id="aboutText" class="prose" data-limit="1"></div>
+      <ul class="ticks" id="aboutPoints"></ul>
+      <a class="teaser-link" href="about.html">More about Ironcore &rarr;</a>
+    </div>
   </div>
 </section>
 
 <section class="sec sec--alt" id="services">
   <div class="wrap">
     <div class="head rv"><h2>Programmes built around your goal</h2><p>Whether you lift, run or restart, there is a programme with your name on it.</p></div>
-    <div class="grid g3" id="servicesGrid"></div>
+    <div class="grid g3" id="servicesGrid" data-limit="3"></div>
+    <p class="row row--c"><a class="btn btn--ghost" href="classes.html">View all classes</a></p>
   </div>
 </section>
 
-<section class="sec" id="trainers">
+<section class="sec cta" id="join">
   <div class="wrap">
-    <div class="head rv"><h2>Coaches who train you, not the clock</h2><p>Certified, experienced and on the floor every session.</p></div>
-    <div class="grid g4" id="trainersGrid"></div>
-  </div>
-</section>
-
-<section class="sec sec--alt" id="plans">
-  <div class="wrap">
-    <div class="head rv"><h2>Simple pricing. No joining traps.</h2><p>Every plan starts with a free trial session and a fitness assessment.</p></div>
-    <div class="grid g3 plans" id="plansGrid"></div>
-  </div>
-</section>
-
-<section class="sec" id="results">
-  <div class="wrap">
-    <div class="head rv"><h2>Real members. Real results.</h2><p>Shared with permission. Individual results vary.</p></div>
-    <div class="grid g3" id="galleryGrid"></div>
-  </div>
-</section>
-
-<section class="sec sec--alt" id="reviews">
-  <div class="wrap">
-    <div class="head rv"><h2>What members say</h2><p id="reviewLink"></p></div>
-    <div class="grid g3" id="reviewsGrid"></div>
-  </div>
-</section>
-
-<section class="sec" id="faq">
-  <div class="wrap faq">
-    <div class="head rv"><h2>Questions before you join</h2><p>Still unsure? <a data-wa href="#" target="_blank" rel="noopener">Ask us on WhatsApp</a>.</p></div>
-    <div id="faqList" class="rv"></div>
-  </div>
-</section>
-
-<section class="sec sec--alt" id="location">
-  <div class="wrap">
-    <div class="head rv"><h2>Find us in <span data-bind="area"></span></h2><p data-bind="address"></p></div>
-    <div class="map rv"><iframe id="mapFrame" title="Map showing the gym location" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
-    <p class="row row--c"><a class="btn btn--ghost" id="dirLink" href="#" target="_blank" rel="noopener">Get directions</a></p>
-  </div>
-</section>
-
-<section class="sec" id="contact">
-  <div class="wrap split split--top">
-    <div class="rv">
-      <h2>Book your free trial</h2>
-      <p class="prose">Pick a time that suits you and we will confirm it. Prefer to talk? Call or message us now.</p>
-      <div class="row" style="margin-top:1.5rem"><a class="btn btn--wa" data-wa href="#" target="_blank" rel="noopener">WhatsApp us</a><a class="btn btn--ghost" data-tel href="#">Call now</a></div>
-      <ul class="info">
-        <li><b>Phone</b><a data-tel data-bind="phoneDisplay" href="#"></a></li>
-        <li><b>Email</b><a data-mail data-bind="email" href="#"></a></li>
-        <li><b>Hours</b><span data-bind="hours"></span></li>
-        <li><b>Instagram</b><a data-ig data-bind="instagramHandle" href="#" target="_blank" rel="noopener"></a></li>
-      </ul>
-    </div>
-    <form class="card form rv" id="form" name="trial" novalidate data-netlify="true" netlify-honeypot="website">
-      <input type="hidden" name="form-name" value="trial">
-      <label for="f-name">Full name</label>
-      <input id="f-name" name="name" autocomplete="name" required aria-describedby="e-name">
-      <p class="err" id="e-name"></p>
-      <label for="f-phone">Mobile number</label>
-      <input id="f-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" placeholder="98765 43210" required aria-describedby="e-phone">
-      <p class="err" id="e-phone"></p>
-      <label for="f-interest">Interested in</label>
-      <select id="f-interest" name="interest" required aria-describedby="e-interest"></select>
-      <p class="err" id="e-interest"></p>
-      <label for="f-time">Preferred time</label>
-      <select id="f-time" name="time" required aria-describedby="e-time"></select>
-      <p class="err" id="e-time"></p>
-      <input class="hp" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
-      <button class="btn" type="submit">Book free trial</button>
-      <p class="note" id="formNote"></p>
-      <p class="status" id="status" role="status" aria-live="polite"></p>
-    </form>
+    <h2>Your first session is free</h2>
+    <p>Come try the floor, meet a coach and see if Ironcore is the right fit. No pressure, no pushy sales.</p>
+    <div class="row"><a class="btn" href="contact.html#contact-form">Book free trial</a><a class="btn btn--wa" data-wa href="#" target="_blank" rel="noopener">WhatsApp us</a></div>
   </div>
 </section>
 </main>
 
 <footer class="foot">
   <div class="wrap foot__in">
-    <div><a href="#top" class="logo" data-bind="name">Your Gym Name</a><p data-bind="address"></p><p data-bind="hours"></p></div>
-    <nav aria-label="Footer"><a href="#services">Classes</a><a href="#plans">Pricing</a><a href="#faq">FAQ</a><a href="#contact">Contact</a></nav>
+    <div><a href="index.html" class="logo" data-bind="name">Your Gym Name</a><p data-bind="address"></p><p data-bind="hours"></p></div>
+    <nav aria-label="Footer"><a href="classes.html">Classes</a><a href="pricing.html">Pricing</a><a href="contact.html#faq">FAQ</a><a href="contact.html">Contact</a></nav>
     <div><a data-ig href="#" target="_blank" rel="noopener">Instagram</a><a data-tel href="#">Call us</a><a data-wa href="#" target="_blank" rel="noopener">WhatsApp</a></div>
   </div>
   <p class="wrap copy">&copy; <span id="year"></span> <span data-bind="name"></span>. All rights reserved.</p>
 </footer>
 
 <a class="wa" data-wa href="#" target="_blank" rel="noopener" aria-label="Chat with us on WhatsApp">WhatsApp</a>
-<div class="dock" aria-label="Quick contact"><a data-tel href="#">Call now</a><a data-wa href="#" target="_blank" rel="noopener">WhatsApp</a><a class="on" href="#contact">Free trial</a></div>
-<script src="script.js" defer></script>
+<div class="dock" aria-label="Quick contact"><a data-tel href="#">Call now</a><a data-wa href="#" target="_blank" rel="noopener">WhatsApp</a><a class="on" href="contact.html#contact-form">Free trial</a></div>
+<script src="config.js"></script>
+<script src="app.js" defer></script>
 </body>
-</html> 
+</html>
